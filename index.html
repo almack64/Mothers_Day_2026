@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Mother's Day</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <style>
+        /* Base Reset & Dark Elegant Theme */
+        body, html {
+            position: relative;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Deep elegant black */
+            font-family: 'Georgia', serif;
+            overflow: hidden; /* Prevent native scrolling */
+        }
+
+        /* The Landing Screen (Autoplay Workaround) */
+        #landing-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #121212;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .open-btn {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            color: #fff;
+            background: transparent;
+            border: 2px solid #d4af37; /* Subtle gold border */
+            border-radius: 50px;
+            cursor: pointer;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+
+        .open-btn:active {
+            background: rgba(212, 175, 55, 0.2);
+        }
+
+        /* Swiper Container Settings */
+        .swiper {
+            width: 100%;
+            height: 100%;
+            display: none; /* Hidden until button is clicked */
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        /* Ensuring the images fit the mobile screen perfectly */
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Keeps the whole card visible without cropping */
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bgm" loop>
+        <source src="background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="landing-screen">
+        <button class="open-btn" id="start-btn">Tap to Open</button>
+    </div>
+
+    <div class="swiper mySwiper" id="card-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="cards/(01)_A_-_Anchor_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(02)_B_-_Blueprint_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(03)_-_C_-_Cards_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(04)_-_D_-_Diversity_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(05)_-_E_-_Emancipation_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(06)_-_F_-_Faithful_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(07)_-_G_-_God_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(08)_H_-_Heart_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(09)_I_-_Intercessor_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(10)_-_J_-_Joy_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(11)_-_K_-_Kaleidoscope_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(12)_-_L_-_Leaning_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(13)_-_M_-_Missed_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(14)_-_N_-_Never_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(15)_-_O_-_Omnipresent_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(16)_-_P_-_Protection_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(17)_-_Q_-_Quiet_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(18)_-_R_-_Return_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(19)_-_S_-_Sweetness_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(20)_-_T_-_Trust_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(21)_-_U_-_Unseen_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(22)_-_V_-_Victory_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(23)_-_W_-_Warrior_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(24)_-_X_-_Christ_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(25)_Y_-_Years_202605092310.jpeg" alt="Mother's Day Card"></div>
+            <div class="swiper-slide"><img src="cards/(26)_- Z - Zenith.jpeg" alt="Mother's Day Card"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+        // 1. Initialize the slider with the 'cards' effect
+        var swiper = new Swiper(".mySwiper", {
+            effect: "cards", // This gives a beautiful 3D stacked card transition
+            grabCursor: true,
+            speed: 600, // Smooth transition speed
+        });
+
+        // 2. Handle the Autoplay Workaround
+        const startBtn = document.getElementById('start-btn');
+        const landingScreen = document.getElementById('landing-screen');
+        const sliderDiv = document.getElementById('card-slider');
+        const audio = document.getElementById('bgm');
+
+        startBtn.addEventListener('click', () => {
+            // Play the music
+            audio.play().catch(error => console.log("Audio playback failed:", error));
+            
+            // Fade out the landing screen
+            landingScreen.style.opacity = '0';
+            
+            // Show and fade in the slider
+            setTimeout(() => {
+                landingScreen.style.display = 'none';
+                sliderDiv.style.display = 'block';
+                // Trigger reflow to ensure CSS transition works
+                void sliderDiv.offsetWidth; 
+                sliderDiv.style.opacity = '1';
+                
+                // Important: Tell Swiper to update its layout now that it's visible
+                swiper.update();
+            }, 1000); // Wait for the 1s fade out transition
+        });
+    </script>
+</body>
+</html>
